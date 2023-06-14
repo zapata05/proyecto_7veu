@@ -2,9 +2,12 @@
 const name  = " soy una sobre escritura "
 const stylecolor = "color: blue"
 const arry=['blue','red','peru'];
+const cambiar=()=>{
+  console.log['-','-','-','-','-','-','-','-','-']
+}
 </script>
 <template>
-<div class="container">
+<div class="container end">
   <h1 >hola<!--{{ name }}--></h1> 
   <h2 :style=stylecolor>pero azul</h2>
    
@@ -18,9 +21,26 @@ const arry=['blue','red','peru'];
   y yo un gato we
 </div>
 </div>
+<div class="container1 bg-danger vh-100 p-5">
+  <div class="row m-2">
+    <button class="col" @click="cambiar"></button>
+    <button class="col" @click="cambiar" ></button>
+    <button class="col" @click="cambiar"></button>
+  </div>
+  <div class="row m-2">
+    <button class="col" ></button>
+    <button class="col" ></button>
+    <button class="col" ></button>
+  </div>
+  <div class="row m-2">
+    <button class="col" ></button>
+    <button class="col" ></button>
+    <button class="col" ></button>
+  </div>
+</div>
 </template>
 
-<style>
+<style>  
 h1{
   color: red;
 }

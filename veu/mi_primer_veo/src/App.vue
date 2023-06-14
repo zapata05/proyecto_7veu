@@ -1,9 +1,13 @@
 <script setup>
+import {ref} from 'vue'
 const name  = " soy una sobre escritura "
 const stylecolor = "color: blue"
 const arry=['blue','red','peru'];
-const cambiar=()=>{
-  console.log['-','-','-','-','-','-','-','-','-']
+
+const cambiar=ref['-','-','-','-','-','-','-','-','-'];
+
+const camb =()=>{
+  cambiar.value
 }
 </script>
 <template>
@@ -21,21 +25,21 @@ const cambiar=()=>{
   y yo un gato we
 </div>
 </div>
-<div class="container1 bg-danger vh-100 p-5">
-  <div class="row m-2">
-    <button class="col" @click="cambiar"></button>
-    <button class="col" @click="cambiar" ></button>
-    <button class="col" @click="cambiar"></button>
+<div class="container1 bg-danger vh-400 p-2">
+  <div class="row m-2 grid text-center ">
+    <button class="col btn btn-primary btn-lg btn-block" @click="camb" ></button>
+    <button class="col btn btn-primary btn-lg btn-block" @click="camb" ></button>
+    <button class="col btn btn-primary btn-lg btn-block" @click="camb"></button>
   </div>
-  <div class="row m-2">
-    <button class="col" ></button>
-    <button class="col" ></button>
-    <button class="col" ></button>
+  <div class="row m-2 grid text-center">
+    <button class="col btn btn-primary btn-lg btn-block" @click="camb" ></button>
+    <button class="col btn btn-primary btn-lg btn-block" @click="camb" ></button>
+    <button class="col btn btn-primary btn-lg btn-block" @click="camb"></button>
   </div>
-  <div class="row m-2">
-    <button class="col" ></button>
-    <button class="col" ></button>
-    <button class="col" ></button>
+  <div class="row m-2 grid text-center">
+    <button class="col btn btn-primary btn-lg btn-block" @click="camb" ></button>
+    <button class="col btn btn-primary btn-lg btn-block" @click="camb" ></button>
+    <button class="col btn btn-primary btn-lg btn-block" @click="camb"></button>
   </div>
 </div>
 </template>

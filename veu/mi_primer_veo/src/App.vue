@@ -9,6 +9,7 @@
       <div class="player-score">
         Jugador O: {{ oScore }}
       </div>
+      <button @click="resetScores">Limpiar Marcador</button>
     </div>
     <div class="board">
       <div
@@ -91,7 +92,12 @@ export default {
       this.currentPlayer = "X";
       this.winner = null;
     }
-  }
+  },
+  resetScores() {
+      this.xScore = 0;
+      this.oScore = 0;
+    }
+  
 };
 </script>
 
@@ -100,7 +106,8 @@ export default {
 .scoreboard {
   display: flex;
   justify-content: space-around;
-  margin-bottom: 20px;
+  align-items: center;
+  margin-bottom: 10px;
   font-size: 18px;
 }
 
@@ -146,7 +153,7 @@ export default {
 }
 
 .cell-selected {
-  background-color: #ffa500;
+  background-color: #d414148a;
   color: #fff;
 }
 
@@ -169,8 +176,12 @@ button {
   background-color: #333;
   color: #fff;
   border: none;
+  border: none;
+  cursor: pointer;
 }
-
+.player-score {
+  margin-right: 20px;
+}
 .message {
   margin-top: 20px;
   font-size: 24px;

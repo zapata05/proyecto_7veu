@@ -165,7 +165,7 @@ bloquear()
 <template>
   
   <div class="container text-center " style=" background-color: royalblue; display:flexbox;">
-    <div id="pepe" style="background-color: cornsilk; align-self:center; align-content:center;">
+    <div id="pepe" class="text-center" style="background-color: cornsilk; align-self:center">
 <div class="d-flex justify-content-flex-start align-content-center"  style="margin-block-end: 20px;">
 <button id="Button1" :class="array[0] != '-'? 'btn btn-success disabled':'btn btn-dark'  " style="height: 100px; width: 100px; margin-right: 20px; " @click="cambiar(0)" >{{ array[0] }}</button>
 <button id="Button2" :class="array[1] != '-'? 'btn btn-success disabled':'btn btn-dark'"  style="height: 100px; width: 100px; margin-right: 20px;" @click="cambiar(1)">{{ array[1] }}</button>
@@ -184,7 +184,7 @@ bloquear()
 </div>
 <br>
 <br>
-<button class="btn btn-primary" @click="reiniciar()">Reiniciar </button>
+<button id="reiniciar" class="btn btn-primary" @click="reiniciar()">Reiniciar </button>
 
 </div>
 
@@ -196,7 +196,7 @@ bloquear()
   <h1>  numero de partidas {{partidas  }}</h1>
   <h1> puntos de x {{px  }}</h1>
   <h1>  puntos de o {{po }}</h1>
-  <button class="btn btn-primary" @click="reiniciarmarc()">Reiniciar el marcador</button>
+  <button id="reiniciarm" class="btn btn-primary" @click="reiniciarmarc()">Reiniciar el marcador</button>
     </div>
 
 </template>
@@ -221,6 +221,25 @@ bloquear()
   flex-wrap: wrap;
   justify-content: center;
   margin-bottom: 20px;
+  
+}
+#reiniciar{
+  padding: 10px 20px;
+  font-size: 18px;
+  background-color: #333;
+  color: #fff;
+  border: none;
+  border: none;
+  cursor: pointer;
+}
+#reiniciarm{
+  padding: 10px 20px;
+  font-size: 18px;
+  background-color: #333;
+  color: #fff;
+  border: none;
+  border: none;
+  cursor: pointer;
 }
 
 .cell {

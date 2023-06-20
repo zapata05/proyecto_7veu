@@ -17,7 +17,7 @@ jug1.value='jugador1';
 jug2.value='jugador2';
 }
 function cambiarnom(){
-
+  
 }
 
 var valoresActuales = [];
@@ -196,20 +196,21 @@ bloquear()
 
 </div>
 
-<div class="container2 text-center" style=" background-color: rebeccapurple; display:flexbox;">
+<div class="container2 felx text-center" style=" background-color: rebeccapurple; display:flexbox;">
 <div style="height: 25px; font-size:xx-large;" v-show="msge">  el ganador es {{turno}} 
   </div>
   <br>
   <br>
-  <h1>  numero de partidas {{partidas  }}</h1>
-  <h1> {{jug1}} x: {{px  }}</h1>
-  <h1>  {{jug2}} o: {{po }}</h1>
+  <h1>#departidas{{partidas  }}</h1>
+  <h1>gano {{jug1}} x: {{px  }}</h1>
+  <h1>gano {{jug2}} o: {{po }}</h1>
  <div> <button id="reiniciarm" class="btn btn-primary" @click="reiniciarmarc()">Reiniciar el marcador</button></div>
  <div>
-  <h2>escribe el jugador 1 men</h2>
+  <h2>escribe jugador 1</h2>
   <input type="text" v-model="jug1">
-  <h2>escribe el jugador 2 men</h2>
+  <h2>escribe jugador 2</h2>
   <input type="text" v-model="jug2">
+  <br>
   <br>
   <button id="reiniciar" @click="cambiarnom">agrega</button>
  </div>
@@ -292,7 +293,7 @@ bloquear()
 }
 
 h1 {
-  font-size: 24px;
-  margin-bottom: 10px;
+  font-size: 1px;
+  margin-bottom: 8px;
 }
 </style>

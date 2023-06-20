@@ -1,17 +1,25 @@
 
 <script setup>
-import { ref } from 'vue';
+import { computed, ref } from 'vue';
 let array=ref(["-","-","-","-","-","-","-","-","-"])
 let turno= ref("X")
 let msge=ref(false)
 let partidas= ref(0)
 let px= ref(0)
 let po= ref(0)
+let jug1=ref('jugador1')
+let jug2=ref('jugador2')
 function reiniciarmarc(){
 po.value=0;
 px.value=0;
 partidas.value=0;
+jug1.value='jugador1';
+jug2.value='jugador2';
 }
+function cambiarnom(){
+
+}
+
 var valoresActuales = [];
 function reiniciar() {
     // Guardar los valores actuales en el arreglo
@@ -165,7 +173,7 @@ bloquear()
 <template>
   
   <div class="container text-center " style=" background-color: royalblue; display:flexbox;">
-    <div id="pepe" class="text-center" style="background-color: cornsilk; align-self:center">
+    <div id="pepe" class="text-center " style="background-color: cornsilk; align-items:center;">
 <div class="d-flex justify-content-flex-start align-content-center"  style="margin-block-end: 20px;">
 <button id="Button1" :class="array[0] != '-'? 'btn btn-success disabled':'btn btn-dark'  " style="height: 100px; width: 100px; margin-right: 20px; " @click="cambiar(0)" >{{ array[0] }}</button>
 <button id="Button2" :class="array[1] != '-'? 'btn btn-success disabled':'btn btn-dark'"  style="height: 100px; width: 100px; margin-right: 20px;" @click="cambiar(1)">{{ array[1] }}</button>
@@ -194,10 +202,18 @@ bloquear()
   <br>
   <br>
   <h1>  numero de partidas {{partidas  }}</h1>
-  <h1> puntos de x {{px  }}</h1>
-  <h1>  puntos de o {{po }}</h1>
-  <button id="reiniciarm" class="btn btn-primary" @click="reiniciarmarc()">Reiniciar el marcador</button>
-    </div>
+  <h1> {{jug1}} x: {{px  }}</h1>
+  <h1>  {{jug2}} o: {{po }}</h1>
+ <div> <button id="reiniciarm" class="btn btn-primary" @click="reiniciarmarc()">Reiniciar el marcador</button></div>
+ <div>
+  <h2>escribe el jugador 1 men</h2>
+  <input type="text" v-model="jug1">
+  <h2>escribe el jugador 2 men</h2>
+  <input type="text" v-model="jug2">
+  <br>
+  <button id="reiniciar" @click="cambiarnom">agrega</button>
+ </div>
+</div>
 
 </template>
 <style>
@@ -208,12 +224,24 @@ bloquear()
   align-content: center;
 }
 .container {
-  background-color: khaki;
+  padding: 15%;
+  height: 100%;
+  width: 100%;
   align-items: center;
   display: flex;
   flex-direction: column;
   justify-content: center;
-  padding: 20px;
+
+}
+.container2{
+  padding: 10%;
+  height: 100%;
+  width: 100%;
+  align-items: center;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+
 }
 
 .board {

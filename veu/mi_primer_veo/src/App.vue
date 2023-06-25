@@ -1,9 +1,9 @@
 
 <script setup>
 import { computed, ref } from 'vue';
-
-import juego from './components/juego.vue'
-let array=ref(["-","-","-","-","-","-","-","-","-"])
+import juego from './components/juego.vue';
+import marcador from './components/marcador.vue';
+// let array=ref(["-","-","-","-","-","-","-","-","-"])
 let turno= ref("X")
 let msge=ref(false)
 let partidas= ref(0)
@@ -177,6 +177,7 @@ bloquear()
 <template>
   
 <juego></juego>
+<marcador></marcador>
   <!--<div class="container text-center " style=" background-color: royalblue; display:flexbox;">
       <div id="pepe" class="text-center " style="background-color: cornsilk; align-items:center;">
   <div class="d-flex justify-content-flex-start align-content-center"  style="margin-block-end: 20px;">

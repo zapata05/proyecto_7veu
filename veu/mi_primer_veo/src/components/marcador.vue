@@ -1,6 +1,8 @@
 <template>
     <div class="container2 felx text-center" style="background-color: rebeccapurple; display:flexbox;">
       <div style="height: 25px; font-size:xx-large;" v-show="msge">
+        <jug1></jug1>
+        <jug2></jug2>
         El ganador es {{ turno }}
       </div>
       <br>
@@ -21,7 +23,7 @@
        
       </div>
     </div>
-    <juego></juego>
+    
   </template>
   
   <script>
